@@ -1,38 +1,356 @@
-.App {
+/************ IMPORTS ************/
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"); */
+
+/************ COLOURS ************/
+:root {
+  --light-bg-color: #fff;
+  --light-color: #121212;
+  --dark-bg-color: #121212;
+  --dark-color: #fff;
+}
+
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url("https://res.cloudinary.com/dfta3fn6p/raw/upload/v1676064194/public/font/CentraNo2-Bold_au8daq.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url("https://res.cloudinary.com/dfta3fn6p/raw/upload/v1676064195/public/font/CentraNo2-Medium_f8e0ma.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url("https://res.cloudinary.com/dfta3fn6p/raw/upload/v1676064194/public/font/CentraNo2-Book_ekdisj.ttf");
+  font-weight: 400;
+}
+
+/************ Default styling ************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+body,
+p {
+  color: #fff !important;
+  /* font-family: "Centra", sans-serif !important;
+   */
+}
+
+/************ Navbar ************/
+nav {
+  background-color: "red" !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  /* @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  } */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 10vw;
+}
+
+.nav-logo {
+  color: #000;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1, 5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  width: 5vw;
+}
+
+/************ Hero Section ************/
+#hero h1 {
+  color: #fff;
+  font-size: 48px;
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* @media screen and (max-width: 768px) {
+    font-size: 40px;
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  } */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hero p {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  /* max-width: 600px; */
+
+  /* @media screen and (max-width: 480px) {
+    font-size: 18px;
+  } */
+}
+
+.hero-container {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+}
+
+.hero-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 3;
+  max-width: 650px;
+  position: absolute;
+  padding: 8px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  /* @media screen and (max-width: 768px) {
+    max-width: 400px;
+  } */
 }
 
-.App-link {
-  color: #61dafb;
+.hero-image-bg {
+  width: 100%;
+  height: 100%;
+  --o-object-fit: cover;
+  object-fit: contain;
+  padding: 0 35vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-scroll {
+  position: absolute;
+  z-index: 3;
+  top: 85%;
+  left: 50%;
+}
+
+.hero-scroll-img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: -5px;
+  transform: rotate(180deg);
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) translateY(20px);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    opacity: 1;
+    transform: rotate(180deg) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(180deg) translateY(-20px);
+  }
+}
+
+/************ About Section ************/
+.about {
+  z-index: 9999;
+  padding: 0 0 15vh 0;
+  position: relative;
+}
+
+.about .container {
+  margin: 0 30vw;
+  z-index: 9999;
+  position: relative;
+  /* Ensure positioning context */
+}
+
+.about .container .about-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: left;
+  padding: 80px 50px;
+  margin-top: -60px;
+  margin-bottom: -60px;
+  position: relative;
+  /* Ensure positioning context */
+  z-index: 10000;
+  /* Higher than other elements */
+}
+
+.about h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.about p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .about .container {
+    margin: 0 15vw;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .about .container {
+    margin: 0 5vw;
+  }
+}
+
+/************ Mission Section ************/
+.about .mission {
+  z-index: 0;
+  /* Ensure this is lower */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  /* Ensure children stretch to the same height */
+  height: 120vh;
+}
+
+.about .mission .box {
+  flex: 1;
+  /* Ensure all boxes take up equal space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f36e4d;
+  /* Center content vertically */
+}
+
+
+.about .mission .content {
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  flex-flow: column;
+  width: 40vw;
+  display: flex;
+  padding-left: 2vw;
+}
+
+.about .mission img {
+  width: 50vw;
+  height: 120vh;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.about .mission h1 {
+  font-size: 2.7em;
+  line-height: 1.1;
+}
+
+.about .mission p {
+  font-size: 1.4em;
+  line-height: 1.3;
+  padding-bottom: 5vh;
+}
+
+.about .desktop {
+  display: block;
+}
+
+.about .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .about .desktop {
+    display: none;
+  }
+
+  .about .mobile {
+    display: block;
+  }
+
+  .about .mission {
+    flex-direction: column;
+  }
+
+  .about .mission .box {
+    flex: 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .about .mission .box .content {
+    width: auto;
+    grid-row-gap: 0;
+  }
+
+  .about .mission .box .content,
+  .about .mission .box .overlay-text {
+    padding: 8vh 5vw;
+  }
+
+  .about .mission img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    /* Adjust opacity here */
   }
 }
