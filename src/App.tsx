@@ -1,9 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Hero from "./components/hero"
-import About from "./components/about"
-import Navbar from './components/navbar';
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import About from "./components/about";
+import Services from "./components/services";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 }

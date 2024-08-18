@@ -33,13 +33,13 @@ const About = () => {
                 <div className="mission">
                     <div className="box">
                         <img className="" src={require("../assets/img/IMG_0638 2.PNG")} alt="Mission Image" />
-                        <div className="overlay-text">
-                            <h4>Mission Statement</h4>
-                            <h1>We cultivate an interest in finding stories of untold cultures and find fascinating and interactive ways to tell them.</h1>
-                        </div>
                     </div>
                     <div className="box">
                         <aside className="content">
+                            <h4>Mission Statement</h4>
+                            <h1>We cultivate an interest in finding stories of untold cultures and find fascinating and interactive ways to tell them.</h1>
+                            <br />
+                            <br />
                             <h4>Vision Statment</h4>
                             <p>To be part of a child’s upbringing. <br />We&#x27;re on a mission to revolutionise the stories that shape the next generation.</p>
                         </aside>
