@@ -1,26 +1,21 @@
 import LogoSvg from "../assets/svg/ICON VARIATION.svg"
+import { getCurrentYear } from '../utils'
 
 const Footer = () => {
-
-    function getCurrentYear(): number {
-        const currentDate = new Date();
-        return currentDate.getFullYear();
-    }
-    
     return (
-        <section className="footer" id="footer">
-            <div className='footer-container'>
-                <section className='footer-subscription'>
-                    <p className='footer-subscription-heading'>
+        <section id="footer">
+            <div className='container'>
+                <section className='subscription'>
+                    <p className='heading'>
                         Join the newsletter to receive our next deals
                     </p>
-                    <p className='footer-subscription-text'>
+                    <p className='text'>
                         You can unsubscribe at any time.
                     </p>
                     <div className='input-areas'>
                         <form>
                             <input
-                                className='footer-input'
+                                className='input'
                                 name='email'
                                 type='email'
                                 placeholder='Your Email'
@@ -29,9 +24,9 @@ const Footer = () => {
                         </form>
                     </div>
                 </section>
-                <div className='footer-links'>
-                    <div className='footer-link-wrapper'>
-                        <div className='footer-link-items'>
+                <div className='links'>
+                    <div className='link-wrapper'>
+                        <div className='link-items'>
                             <h2>About Us</h2>
                             <a href='/sign-up'>How it works</a>
                             <a href='/'>Testimonials</a>
@@ -39,7 +34,7 @@ const Footer = () => {
                             <a href='/'>Investors</a>
                             <a href='/'>Terms of Service</a>
                         </div>
-                        <div className='footer-link-items'>
+                        <div className='link-items'>
                             <h2>Contact Us</h2>
                             <a href='/'>Contact</a>
                             <a href='/'>Support</a>
@@ -47,15 +42,15 @@ const Footer = () => {
                             <a href='/'>Sponsorships</a>
                         </div>
                     </div>
-                    <div className='footer-link-wrapper'>
-                        <div className='footer-link-items'>
+                    <div className='link-wrapper'>
+                        <div className='link-items'>
                             <h2>Videos</h2>
                             <a href='/'>Submit Video</a>
                             <a href='/'>Ambassadors</a>
                             <a href='/'>Agency</a>
                             <a href='/'>Influencer</a>
                         </div>
-                        <div className='footer-link-items'>
+                        <div className='link-items'>
                             <h2>Social Media</h2>
                             <a href='/'>Instagram</a>
                             <a href='/'>Facebook</a>
@@ -68,7 +63,7 @@ const Footer = () => {
                     <div className='social-media-wrap'>
                         <div className='footer-logo'>
                             <a href='/' className='social-logo'>
-                                <img src={LogoSvg} alt="Logo Image" />
+                                <img src={LogoSvg} alt="Logo" />
                                 <i className='fab fa-typo3' />
                             </a>
                         </div>

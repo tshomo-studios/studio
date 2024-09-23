@@ -1,8 +1,8 @@
 const About = () => {
     return (
-        <section className="about" id="about">
+        <section id="about">
             <div className="container">
-                <div className="about-bx wow zoomIn">
+                <div className="content wow zoomIn">
                     <h2>Who are we?</h2>
                     <p>
                         Tshomo Studios is a video game and animation
@@ -21,18 +21,18 @@ const About = () => {
                             <h4>Mission Statment</h4>
                             <h1>We cultivate an interest in finding stories of untold cultures and find fascinating and interactive ways to tell them.</h1>
                             <h4>Vision Statment</h4>
-                            <p>To be part of a child’s upbringing. <br />We&#x27;re on a mission to revolutionise the stories that shape the next generation.</p>
+                            <p>To be part of a child&#x27;s upbringing. <br />We&#x27;re on a mission to revolutionise the stories that shape the next generation.</p>
                         </aside>
                     </div>
                     <div className="box">
-                        <img className="" src={require("../assets/img/IMG_0638 2.PNG")} alt="Mission Image" />
+                        <img className="" src={require("../assets/img/IMG_0638 2.PNG")} alt="Mission" />
                     </div>
                 </div>
             </div>
             <div className="mobile">
                 <div className="mission">
                     <div className="box">
-                        <img className="" src={require("../assets/img/IMG_0638 2.PNG")} alt="Mission Image" />
+                        <img className="" src={require("../assets/img/IMG_0638 2.PNG")} alt="Mission" />
                     </div>
                     <div className="box">
                         <aside className="content">
@@ -41,7 +41,7 @@ const About = () => {
                             <br />
                             <br />
                             <h4>Vision Statment</h4>
-                            <p>To be part of a child’s upbringing. <br />We&#x27;re on a mission to revolutionise the stories that shape the next generation.</p>
+                            <p>To be part of a child&#x27;s upbringing. <br />We&#x27;re on a mission to revolutionise the stories that shape the next generation.</p>
                         </aside>
                     </div>
                 </div>

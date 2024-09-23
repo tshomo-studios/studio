@@ -1,34 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaBars, FaRegUser } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
-import LogoSvg from "../assets/svg/TSHOMO ICON.svg"
+import LogoSvg from "../assets/svg/TSHOMO ICON.svg";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        const onScroll = () => {
-            window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
-        };
-
-        window.addEventListener("scroll", onScroll);
-
-        return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = useCallback(() => {
+        setScrolled(window.scrollY > 50);
     }, []);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [handleScroll]);
 
     const toggleHome = () => {
         scroll.scrollToTop();
     };
 
     return (
-        <nav>
-            <div className="nav-container">
-                <div className="nav-logo">
-                    <img src={LogoSvg} alt="Logo Image" />
+        <nav className={scrolled ? "scrolled" : ""}>
+            <div className="container">
+                <div className="logo" onClick={toggleHome}>
+                    <img src={LogoSvg} alt="TSHOMO Logo" />
                 </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
