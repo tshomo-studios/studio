@@ -2,6 +2,8 @@
 
 [Dev Container](https://medium.com/@zahedialfurquan20/react-vscode-dev-containers-90dc66732555)
 
+[Video for devcontainer benefits](https://www.youtube.com/watch?v=dihfA7Ol6Mw&t=310s)
+
 ## Previous setup
 
 ```json
