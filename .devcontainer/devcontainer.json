@@ -10,8 +10,13 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/bash",
-				"workbench.colorTheme": "oh-lucy",
-				"workbench.iconTheme": "material-icon-theme"
+				// "workbench.colorTheme": "oh-lucy",
+				  "workbench.colorTheme": "Andromeda",
+				"workbench.iconTheme": "material-icon-theme",
+				"git.decorations.enabled": true,
+				"git.autofetch": true,
+				"git.confirmSync": false,
+				"git.enableSmartCommit": true
 			},
 			"extensions": [
 				"dbaeumer.vscode-eslint",
@@ -19,7 +24,8 @@
 				"dsznajder.es7-react-js-snippets",
 				"ms-azuretools.vscode-docker",
 				"hermitter.oh-lucy-vscode",
-				"pkief.material-icon-theme"
+				"pkief.material-icon-theme",
+				"eamodio.gitlens"
 			]
 		}
 	},
