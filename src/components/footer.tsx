@@ -2,6 +2,17 @@ import LogoSvg from "../assets/svg/ICON VARIATION.svg"
 import { getCurrentYear } from '../utils'
 
 const Footer = () => {
+    const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const email = formData.get('email');
+        if (email) {
+            console.log('Newsletter subscription:', email);
+            e.currentTarget.reset();
+            alert('Thank you for subscribing!');
+        }
+    };
+
     return (
         <section id="footer">
             <div className='container'>
@@ -13,14 +24,15 @@ const Footer = () => {
                         You can unsubscribe at any time.
                     </p>
                     <div className='input-areas'>
-                        <form>
+                        <form onSubmit={handleSubscribe}>
                             <input
                                 className='input'
                                 name='email'
                                 type='email'
                                 placeholder='Your Email'
+                                required
                             />
-                            <button className='btn btn--outline'>Subscribe</button>
+                            <button type='submit' className='btn btn--outline'>Subscribe</button>
                         </form>
                     </div>
                 </section>
@@ -28,34 +40,34 @@ const Footer = () => {
                     <div className='link-wrapper'>
                         <div className='link-items'>
                             <h2>About Us</h2>
-                            <a href='/sign-up'>How it works</a>
-                            <a href='/'>Testimonials</a>
-                            <a href='/'>Careers</a>
-                            <a href='/'>Investors</a>
-                            <a href='/'>Terms of Service</a>
+                            <a href='#about'>How it works</a>
+                            <a href='#about'>Testimonials</a>
+                            <a href='#about'>Careers</a>
+                            <a href='#about'>Investors</a>
+                            <a href='#about'>Terms of Service</a>
                         </div>
                         <div className='link-items'>
                             <h2>Contact Us</h2>
-                            <a href='/'>Contact</a>
-                            <a href='/'>Support</a>
-                            <a href='/'>Destinations</a>
-                            <a href='/'>Sponsorships</a>
+                            <a href='#contact'>Contact</a>
+                            <a href='#contact'>Support</a>
+                            <a href='#about'>Destinations</a>
+                            <a href='#about'>Sponsorships</a>
                         </div>
                     </div>
                     <div className='link-wrapper'>
                         <div className='link-items'>
                             <h2>Videos</h2>
-                            <a href='/'>Submit Video</a>
-                            <a href='/'>Ambassadors</a>
-                            <a href='/'>Agency</a>
-                            <a href='/'>Influencer</a>
+                            <a href='#about'>Submit Video</a>
+                            <a href='#about'>Ambassadors</a>
+                            <a href='#about'>Agency</a>
+                            <a href='#about'>Influencer</a>
                         </div>
                         <div className='link-items'>
                             <h2>Social Media</h2>
-                            <a href='/'>Instagram</a>
-                            <a href='/'>Facebook</a>
-                            <a href='/'>Youtube</a>
-                            <a href='/'>Twitter</a>
+                            <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>Instagram</a>
+                            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>Facebook</a>
+                            <a href='https://youtube.com' target='_blank' rel='noopener noreferrer'>Youtube</a>
+                            <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>Twitter</a>
                         </div>
                     </div>
                 </div>
@@ -71,40 +83,45 @@ const Footer = () => {
                         <div className='social-icons'>
                             <a
                                 className='social-icon-link facebook'
-                                href='/'
+                                href='https://facebook.com'
                                 target='_blank'
+                                rel='noopener noreferrer'
                                 aria-label='Facebook'
                             >
                                 <i className='fab fa-facebook-f' />
                             </a>
                             <a
                                 className='social-icon-link instagram'
-                                href='/'
+                                href='https://instagram.com'
                                 target='_blank'
+                                rel='noopener noreferrer'
                                 aria-label='Instagram'
                             >
                                 <i className='fab fa-instagram' />
                             </a>
                             <a
                                 className='social-icon-link youtube'
-                                href='/'
+                                href='https://youtube.com'
                                 target='_blank'
+                                rel='noopener noreferrer'
                                 aria-label='Youtube'
                             >
                                 <i className='fab fa-youtube' />
                             </a>
                             <a
                                 className='social-icon-link twitter'
-                                href='/'
+                                href='https://twitter.com'
                                 target='_blank'
+                                rel='noopener noreferrer'
                                 aria-label='Twitter'
                             >
                                 <i className='fab fa-twitter' />
                             </a>
                             <a
-                                className='social-icon-link twitter'
-                                href='/'
+                                className='social-icon-link linkedin'
+                                href='https://linkedin.com'
                                 target='_blank'
+                                rel='noopener noreferrer'
                                 aria-label='LinkedIn'
                             >
                                 <i className='fab fa-linkedin' />

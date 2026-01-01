@@ -1,9 +1,11 @@
 const Contact = () => {
+    const instagramImage = require("../assets/img/Instagram Stories Card.png");
+    
     return (
         <section id="contact">
             <div className="container">
                 <div className="box">
-                    <img src={require("../assets/img/Instagram Stories Card.png")} alt="Carousel" />
+                    <img src={instagramImage} alt="Social media reach" />
                 </div>
 
                 <div className="box">

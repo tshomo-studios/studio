@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { FaBars, FaRegUser } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import LogoSvg from "../assets/svg/TSHOMO ICON.svg";
 
