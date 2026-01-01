@@ -1,4 +1,4 @@
-const Contact = () => {
+const Reach = () => {
     return (
         <section id="contact">
             <div className="container">
@@ -7,7 +7,7 @@ const Contact = () => {
                 </div>
 
                 <div className="box">
-                    <h1>Our reach</h1>
+                    <h2>Our reach</h2>
                     <p>
                         As humans, we are deeply influenced by
                         the factors that shape our identities. Our
@@ -34,4 +34,4 @@ const Contact = () => {
     );
 }
 
-export default Contact
+export default Reach;
