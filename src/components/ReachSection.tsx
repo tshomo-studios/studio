@@ -1,15 +1,14 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { Instagram, Twitter, Youtube } from "lucide-react";
 import { useRef } from "react";
-import { Instagram, Youtube, Twitter } from "lucide-react";
 
 const ReachSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#", followers: "3K+" },
-    { icon: Youtube, label: "YouTube", href: "#", followers: "1.2K+" },
+    { icon: Instagram, label: "Instagram", href: "#", followers: "1K+" },
+    { icon: Youtube, label: "YouTube", href: "#", followers: "1K+" },
     { icon: Twitter, label: "Twitter", href: "#", followers: "500+" },
   ];
 
@@ -30,13 +29,13 @@ const ReachSection = () => {
               Building a community
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              As humans, we are deeply influenced by the factors that shape our identities. 
-              Our goal is to connect with individuals on a personal level and celebrate their 
+              As humans, we are deeply influenced by the factors that shape our identities.
+              Our goal is to connect with individuals on a personal level and celebrate their
               uniqueness and cultural backgrounds.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              We offer engaging short films depicting relatable characters living everyday lives, 
-              shedding light on current societal issues. This approach allows us to interact with 
+              We offer engaging short films depicting relatable characters living everyday lives,
+              shedding light on current societal issues. This approach allows us to interact with
               our audience, build rapport, and establish long-lasting connections.
             </p>
 
