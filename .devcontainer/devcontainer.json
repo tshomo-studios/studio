@@ -1,8 +1,8 @@
 {
-	"name": "React DevContainer",
+	"name": "Tshomo Studios Dev",
 	"context": "..",
 	"dockerFile": "Dockerfile",
-	"appPort": [3000],
+	"appPort": [8080],
 	"postCreateCommand": "bash .devcontainer/scripts/post-create-commands.sh",
 	"postAttachCommand": "bash .devcontainer/scripts/post-attach-commands.sh",
 
@@ -10,8 +10,7 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/bash",
-				// "workbench.colorTheme": "oh-lucy",
-				  "workbench.colorTheme": "Andromeda",
+				"workbench.colorTheme": "Andromeda",
 				"workbench.iconTheme": "material-icon-theme",
 				"git.decorations.enabled": true,
 				"git.autofetch": true,
@@ -19,23 +18,15 @@
 				"git.enableSmartCommit": true
 			},
 			"extensions": [
+				"astro-build.astro-vscode",
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
 				"dsznajder.es7-react-js-snippets",
 				"ms-azuretools.vscode-docker",
-				"hermitter.oh-lucy-vscode",
 				"pkief.material-icon-theme"
-				// "eamodio.gitlens"
 			]
 		}
 	},
-	"runArgs": [
-		"--env-file",
-		".devcontainer/.env",
-		"--privileged",
-		"-v",
-		"C:/Users/nhlan/.ssh:/mnt/c/Users/nhlan/.ssh"
-	],
-	"forwardPorts": [3000],
+	"forwardPorts": [8080],
 	"remoteUser": "node"
 }

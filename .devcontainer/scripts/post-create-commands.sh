@@ -1,4 +1,4 @@
-npm install
+pnpm install
 
 # Create the .ssh directory if it doesn't exist
 mkdir -p ~/.ssh
