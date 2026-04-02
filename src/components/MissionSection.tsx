@@ -12,7 +12,7 @@ const MissionSection = () => {
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <img
-          src={patternImage}
+          src={patternImage.src}
           alt=""
           className="w-full h-full object-cover"
         />

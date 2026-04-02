@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={heroImage.src}
           alt="Afrofuturistic explorer with binoculars"
           className="w-full h-full object-cover object-top opacity-30"
         />

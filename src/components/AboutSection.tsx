@@ -20,7 +20,7 @@ const AboutSection = () => {
           >
             <div className="relative rounded-3xl overflow-hidden glow-coral">
               <img
-                src={portraitImage}
+                src={portraitImage.src}
                 alt="African cultural portrait"
                 className="w-full aspect-[3/4] object-cover"
               />
