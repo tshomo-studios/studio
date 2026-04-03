@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [react()],
   output: "static",
   // Update this to your actual GitHub Pages URL: https://<username>.github.io
-  site: "https://omoinjm.github.io",
+  site: "https://tshomo.njmtech.co.za",
   server: {
     port: 8080,
     host: true,
